@@ -1,0 +1,83 @@
+<!-- Projects Introduction -->
+<section class="mb-12">
+    <h1 class="text-projects mb-4">Projects</h1>
+    <p>
+    Here you can find projects, including technical writing, UX design, and academic research. Although diverse in terms of subject matter, they find common ground in the application of cognitive science to the use and development of technology.
+    </p>
+</section>
+
+<!-- Research -->
+<section class="mb-12">
+    <h2 class="text-projects">Research and publications</h2>
+
+    <div class="card shadow custom-hover-shadow mb-5 mt-3">
+    <a href="{{ url_for('second_year_thesis_page') }}" class="stretched-link text-decoration-none text-dark">
+        <div class="card-body">
+        <h5 class="card-title">Second year Master's thesis</h5>
+        <p class="card-text">I investigated how second language English writers use AI tools to help them write.</p>
+        </div>
+    </a>
+    </div>
+
+    <div class="card shadow custom-hover-shadow mb-5 mt-3">
+        <a href="{{ url_for('first_year_thesis_page') }}" class="stretched-link text-decoration-none text-dark">
+            <div class="card-body">
+                <h5 class="card-title">First year Master's thesis</h5>
+                <p class="card-text">I investigated the application of keystroke logging in classrooms when students are taking tests.</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- UX Design -->
+<section class="mb-12">
+    <h2 class="text-projects">UX design</h2>
+    <div class="row g-3 mb-5">
+
+        <div class="col-md-6">
+            <div class="card thumb-card shadow custom-hover-shadow position-relative overflow-hidden">
+                <a href="{{ url_for('book_finder_page') }}" class="stretched-link text-decoration-none text-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">Book Finder: A Reading Suggestion App</h5>
+                    </div>
+                    <div class="position-relative">
+                        <img src="{{ url_for('static', filename='images/book-finder/device.png') }}" class="card-img-bottom thumbnail-img" alt="Book Finder" style="width: 42%">
+                        <div class="hover-text-overlay">
+                            <p>This case study showcases the development of Book Finder, a personalized book recommendation app designed to match readers with books that align with their skills and interests.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card thumb-card shadow custom-hover-shadow position-relative overflow-hidden">
+                <a href="{{ url_for('infotainment_page') }}" class="stretched-link text-decoration-none text-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">Infotainment User-Interface Design</h5>
+                    </div>
+                    <div class="position-relative">
+                        <img src="{{ url_for('static', filename='images/Car-Thumbnail.png') }}" class="card-img-top thumbnail-img" alt="Infotainment Design" style="width: 67%">
+                        <div class="hover-text-overlay">
+                            <p>This case study presents a collaborative project where my team designed an infotainment system for the Nissan Juke, focusing on cognitive ergonomics to enhance safety.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Technical Writing -->
+<section class="mb-12">
+    <h2 class="text-projects">Technical writing</h2>
+    <div class="card shadow custom-hover-shadow mb-5 mt-3">
+        <a href="{{ url_for('ggxlog_how_to_page') }}" class="stretched-link text-decoration-none text-dark">
+            <div class="card-body">
+            <h5 class="card-title">How to write a text with GenoGraphiX-LOG</h5>
+            <p class="card-text">A short introductory guide on how to use GenoGraphiX-LOG for writing and analyzing text.</p>
+            </div>
+        </a>
+    </div>
+</section>

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.5"
+  },
+  "scripts": {
+    "style": "npx sass --load-path=node_modules base.scss static/styles/style.css"
+  }
+}

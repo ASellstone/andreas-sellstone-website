@@ -1,0 +1,117 @@
+/* Main background color*/
+body {
+  background-color: $color-folder;
+}
+
+/* Cursor animation */
+.typing-cursor::after {
+  content: "|";
+  animation: blink 1s step-start infinite;
+}
+
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* A class for a section that takes up the whole page */
+.full-page {
+    min-height: 100vh; /* Take up full screen height */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to top */
+  }
+
+/* On desktop */
+@media (min-width: 992px) {
+  /* Extra padding sizes on desktop */
+  @for $i from 6 through 20 {
+    .container.dpx-#{$i} {
+      padding-left: $spacer * ($i - 2);
+      padding-right: $spacer * ($i - 2);
+    }
+  }
+
+  /* Specific percentage based padding for main */
+  .container.main-padding {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  /*Percentage based margin*/
+  .perc-margin {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  /* A class for a section that takes up the whole page */
+  .full-page {
+    padding-top: 5vh;  /* Push content down a bit from the very top */
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 992px) {
+  .content-wrapper {
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+    width: 100%;
+    border-radius: 3px;
+    background: $color-paper;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 1rem;
+    margin-bottom: -1rem;
+    z-index: 1;
+    position: relative;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body.has-content-wrapper {
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .main, .page, .container {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content-wrapper {
+      animation: fadeInUp 0.6s ease-out forwards;
+      animation-delay: 0.1s;
+      opacity: 0;
+      width: 100vw;
+      background: $color-paper;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      margin: 0;
+      box-sizing: border-box;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 1rem;
+      margin-bottom: -1rem;
+      z-index: 1;
+      position: relative;
+    }
+  }
+}

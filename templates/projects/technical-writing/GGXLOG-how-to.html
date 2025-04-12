@@ -1,0 +1,221 @@
+{% include 'header.html' %}
+
+<main class="container mb-5 main-padding">
+  <div class="content-wrapper">
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ url_for('projects_page') }}">Projects</a></li>
+        <li class="breadcrumb-item active" aria-current="page">How to write a text with GenoGraphiX-LOG</li>
+      </ol>
+    </nav>
+
+    <h1 id="title" class="text-projects">How to write a text with GenoGraphiX-LOG</h1>
+
+    <p>In this short guide I will teach you how to write a text in the keystroke logging software GenoGraphiX-LOG. I will also give a short primer on how to prepare for the analysis of your writing session at the end of the guide.</p>
+
+    <p>Before I start with the guide itself, I will begin with a short introduction to what kind of software GenoGraphiX-LOG is and why you might want to use it. Go to the section <a href="#how-to-start-writing">How to start writing</a> if you want to go straight into how to use the program.</p>
+
+    <div class="card my-4 shadow custom-hover-shadow toc-card">
+      <div class="card-header" id="toc-heading">
+        <button class="btn btn-link d-flex align-items-center text-decoration-none toc-button" type="button" aria-expanded="true" aria-controls="toc-body" data-bs-toggle="collapse" data-bs-target="#toc-body">
+          <i class="fa-solid fa-chevron-down me-2 rotate down" id="toc-arrow"></i> Table of Contents
+        </button>
+      </div>
+      <div id="toc-body" class="collapse" aria-labelledby="toc-heading">
+        <div class="card-body py-2">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item toc-card">
+              <a href="#what-is-genographix-log">What is GenoGraphiX-LOG?</a>
+            </li>
+            <li class="list-group-item toc-card">
+              <a href="#why-use-a-keystroke-logger">Why use a keystroke logger?</a>
+            </li>
+            <li class="list-group-item toc-card">
+              <a href="#who-should-use-a-keystroke-logger">Who should use a keystroke logger?</a>
+            </li>
+            <li class="list-group-item toc-card">
+              <a href="#how-to-start-writing">How to start writing</a>
+              <ul class="list-unstyled ms-3 mt-2">
+                <li><a href="#step-1">Step 1: Installing the program</a></li>
+                <li><a href="#step-2">Step 2: Creating a new project</a></li>
+                <li><a href="#step-3">Step 3: Start writing</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item toc-card">
+              <a href="#analyzing-a-writing-session">Analyzing a writing session</a>
+              <ul class="list-unstyled ms-3 mt-2">
+                <li><a href="#native-analytical-features">Native analytical features</a></li>
+                <li><a href="#uploading">Uploading logging data into statistical software</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="what-is-genographix-log" class="text-projects">What is GenoGraphiX-LOG?</h2>
+
+    <p>GenoGraphiX-LOG (GGXLog) is a program that records your keystrokes as you type on your keyboard. This type of program is usually called a keystroke logging program. You might be familiar with keyloggers as malicious software used to steal confidential information. A hacker might use a covertly installed keylogger on a victims computer to steal their login information. GGXLog is not and cannot be used for malicious purposes. Instead, GGXLog is primarily used for writing research. It is the software I used to investigate <a href="first-year-thesis.html">the writing processes of high school students</a>, and when I explored <a href="second-year-thesis.html">how academics used AI-assistance</a>.</p>
+
+    <p>When you use GGXLog to write a text, it records each keystroke you pressed when writing. GGXLog then compiles and stores the data as a log file.</p>
+          
+    <p>As an example, here is the log for “GGXLog records each keystroke” from the previous sentence in a spreadsheet:</p>
+
+
+    <iframe
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRxdL9GovdjT_m0AWD1o1dkfFXpRivCcLLloI3sV1Oc_2KAewIDDyhcfX5JzHGDWIjm0362J0vKPaA3/pubhtml?widget=true&headers=false"
+    width="100%"
+    style="overflow: auto;"
+    frameborder="0">
+    </iframe>
+
+    <p>The sheer amount of data that keystroke logging provides from writing a very short sentence becomes clear in this example. However, GGXLog also offers several features for analysis because of the inaccessible format of the log. Furthermore, the log can also be loaded into statistical software.</p>
+
+    <h3 id="why-use-a-keystroke-logger" class="text-projects">Why use a keystroke logger?</h3>
+
+    <p>Beyond recording <i>what</i> key you press on the keyboard, it also records when you press the key. This gives you the pause length between each character, word, sentence, and paragraph of your text. The length of the pause as well as where the pause occurs can tell you a lot about writing processes:</p>
+
+    <ul>
+      <li>Longer pauses between characters can indicate spelling difficulties (orthographic processing).</li>
+      <li>Longer pauses between words can indicate struggling to think of a word (lexical retrieval).</li>
+      <li>Longer pauses between sentences can indicate planning of the next sentence or evaluation of the previous sentence (higher-order processing).</li>
+      <li>Longer pauses between paragraphs can indicate organizing the overall text (also higher-order processing).</li>
+    </ul>
+
+    <p>These processes are <i>cognitive</i>—that is, they indicate some mental activity. Cognitive processes are typically indicated by pauses above 2 seconds, what is called a <i>cognitive pause</i>. So a pause above 2 seconds within a word might be indicative of spelling difficulties.</p>
+
+    <div class="alert alert-info">
+      <strong>Note:</strong> The 2-second threshold is backed up by research and generally accepted. However, what threshold should be used can differ depending on context and the writers themselves. When to use what threshold will not be discussed here.
+    </div> 
+
+    <p>Additionally, cognitive processes are not the only type of writing process you can investigate with GGXLog. Pauses can say a lot of things, but deletions are also recorded since keystroke loggers record every pressed key (including backspace and selections with the mouse). We can therefore see changes in the texts, what are called revisions, making the text’s evolution over time visible.</p>
+
+    <h3 id="who-should-use-a-keystroke-logger" class="text-projects">Who should use a keystroke logger?</h3>
+
+    <p>There are many different reasons to write with a keystroke logger, and many different people that would find it useful.</p>
+
+    <P><b>Researchers</b> have used keystroke logging to study different peoples writing processes for some time now.</P>
+
+    <p><b>Teachers</b> can use keystroke logging to get a better view of student’s writing abilities and their progress. <a href="first-year-thesis.html">I investigated</a> its use for teachers to gain a more nuanced perspective of their students’ performances on tests.</p>
+
+    <p><b>Clinicians</b> can use keystroke logging to detect writing difficulties caused by neuropsychiatric disorders. <a href="https://doi.org/10.1038/s41598-022-11865-7">Recent studies</a> have shown keystroke logging as a useful tool to detect early stages of dementia.</p>
+
+    <p><b>Students</b> or <b>writers</b> of any type might want to know more about how they write texts themselves. This can include what they struggle with, how much their text evolves over time, or what their writing process looks like.</p>
+
+    <h2 id="how-to-start-writing" class="text-projects">How to start writing</h2>
+
+    <p>Now you know what a keystroke logger is and who might want to use it and what one would use it for. In this section I will cover how to use GGXLog to write a text, and prepare the analysis of the writing session.</p>
+
+    <h3 id="step-1" class="text-projects">Step 1: Installing the program</h3>
+
+    <p>To write using GGXLog, you first need to have the program installed on your computer. You can download GGXLog at the website <a href="https://ggxlog.net">ggxlog.net</a>. Go to the “Downloads” section on the website and download the version for your operating system.</p>
+
+    <img src="{{ url_for('static', filename='images/ggxlog_downloads_2.png') }}" alt="The download page for GGXLog." class="img-fluid mx-auto d-block w-75 mb-3">
+
+    <p>You will have to register to download the program. You do this by entering your name, email, country, as well as eventual university affiliation and research project. You do not have to give accurate information, and you will be able to download the program immediately after registering.</p>
+
+    <img src="{{ url_for('static', filename='images/download_john_doe.png') }}" alt="Registration form for GGXLog." class="img-fluid mx-auto d-block w-75 mb-3">
+
+    <div class="alert alert-warning">
+      <strong>Important:</strong> Your antivirus software or system security might flag the software as potential malware. This is because GGXLog logs your keystrokes when you are using the program. In that case you will have to give GGXLog permission to run anyway.
+    </div>
+
+    <div class="alert alert-secondary">
+      <strong>See also:</strong> If you need more guidance on how to install GGXLog, you can follow the installation instructions on the <a href="https://www.ggxlog.net/usersupport.html">user support section</a> on the GGXlog website.
+    </div>
+
+    <h3 id="step-2" class="text-projects">Step 2: Creating a new project</h3>
+
+    <p>When you have GGXLog installed, you will have to start a new project. To do this, open the program and navigate to the top bar and press “Project”, and then “New”.</p>
+
+    <p>A window will appear with two subsections. One subsection is called “Project Settings” and another subsection is called “Informant Information”.</p>
+
+    <img src="{{ url_for('static', filename='images/ggxlog_project.png') }}" alt="The settings for creating a new project in GGXLog." class="img-fluid mx-auto d-block w-50 mb-3">
+
+    <p>The project settings section includes settings for your project, such as the previously mentioned project types, the expected session length if you want a real time graph, and where you want to save your project</p>
+
+    <p>For a project where you write a text such as an essay, short story, or another similar text, you should select “Free-writing” as the project type. The “Session length” setting is only relevant if you want to display the real-time graph when you write. Select “Long text” unless you know that your writing session will last for less than 10 minutes. To choose where to save your project folder, press the brows button by the “File Save Location” setting.</p>
+
+    <img src="{{ url_for('static', filename='images/ggxlog_project_settings.png') }}" alt="The project settings section." class="img-fluid mx-auto d-block w-50 mb-3">
+
+    <div class="alert alert-info">
+      <strong>Note:</strong> The real-time graph is not recommended for new users. The graph is difficult to understand and might be distracting.
+    </div>
+
+    <p>The informant information section is for research purposes. In this section, the participant can provide general demographic information. It also contains an informed consent form for the participant.</p>
+
+    <p>When you are done setting up your project, press “Continue” at the bottom right of the window to create the project.</p>
+
+    <img src="{{ url_for('static', filename='images/ggxlog_informant_information.png') }}" alt="The informant information section." class="img-fluid mx-auto d-block w-50 mb-3">
+
+    <h3 id="step-3" class="text-projects">Step 3: Start writing</h3>
+
+    <p>Now you will be presented with the writing interface consisting of a few buttons, and the text editor where you will write your text below the buttons.</p>
+
+    <img src="{{ url_for('static', filename='images/ggxlog_session.png') }}" alt="The writing interface." class="img-fluid mx-auto d-block mb-3">
+
+    <p>To begin the writing session press the button called “Record”. The text editor will unlock and turn white, which means that you are able to start writing your text.</p>
+
+    <img src="{{ url_for('static', filename='images/ggxlog_record.png') }}" alt="The record button that starts the recording of the writing session and unlocks the writing window." class="img-fluid mx-auto d-block w-50 mb-3">
+
+    <p>When you have started the writing session and are recording, what previously was the record button will become a pause button. Pressing the pause button will pause the recording and the text editor will be locked again.</p>
+
+    <img src="{{ url_for('static', filename='images/ggxlog_pause.png') }}" alt="The pause button that temporarily stops the recording of the writing session and locks the writing window." class="img-fluid mx-auto d-block w-50 mb-3">
+
+    <p>When you have finished your writing session press “Stop and Save” to stop the writing session and save your session. You will be asked to confirm your choice. When confirmed, the program will tell you where the project was saved, which will be the destination you chose when setting up the project.</p>
+
+    <img src="{{ url_for('static', filename='images/ggxlog_save.png') }}" alt="The stop and save button that stops the recording and saves the writing session." class="img-fluid mx-auto d-block w-50 mb-3">
+
+    <p>Now you know how to create a project and write a text using GGXLog. Next we will look at how to analyze the keystroke log.</p>
+
+    <h2 id="analyzing-a-writing-session" class="text-projects">Analyzing a writing session</h2>
+
+    <p>You can analyze the writing session when you are done writing and have saved it. To analyze the text you need to open it in GGXLog. To do this, click “Project”, then “Open” and navigate to where you saved your project.</p>
+
+    <p>Open the project folder, then select the file called “Session_log.log” and press “Open” or double click the file. The folder probably has a name consisting of a string of numbers</p>
+
+    <p>Now you will see that a tab called “Session Replay” has opened in GGXLog. In this tab you can watch your writing session, speed it up or down, and navigate through the recording.</p>
+
+    <img src="{{ url_for('static', filename='images/session_replay_80.gif') }}" alt="Replaying the writing session in real time." class="img-fluid mx-auto d-block mb-3">
+
+    <p>The session replay feature can be useful, but does not provide deeper insights than what you can get from screen recordings of writing sessions. To analyze keystroke logging data we need to utilize the tools that GGXLog provides, or upload the logged data to statistical software.</p>
+
+    <h3 id="native-analytical-features" class="text-projects">Native analytical features</h3>
+
+    <p>You can find further analytical features within the “View” dropdown window in the top navigation bar. Here you can find several analytical tools that GGXLog supports.</p>
+
+    <img src="{{ url_for('static', filename='images/ggxlog_view.png') }}" alt="You can find the analytical tools within the "View" dropdown menu." class="img-fluid mx-auto d-block w-75 mb-3">
+
+    <p>How to use these tools will not be covered here, but will be addressed in another guide.</p>
+
+    <h3 id="uploading" class="text-projects">Uploading logging data into statistical software</h3>
+
+    <p>If you want to conduct an analysis that is not supported by GGXLog, you can upload the log file to statistical software. In this case, you might have to convert the log file into another format.</p>
+
+    <p>The following is an example of a python script that converts a log file into a csv spreadsheet:</p>
+
+    <pre><code>
+      import csv
+      import pandas as pd
+
+      input_file_path = r'path\to\your\log\file'  # This is your GGXLog log file
+      output_file_path = r'path\to\where\you\want\to\save\your\converted\log'  # This will be the output CSV file
+
+      with open(input_file_path, 'r', newline='', encoding='utf-8') as tsv_file:
+        tsv_reader = csv.reader(tsv_file, delimiter='\t')
+
+        with open(output_file_path, 'w', newline='', encoding='utf-8') as csv_file:
+            csv_writer = csv.writer(csv_file, delimiter=',')
+
+            for row in tsv_reader:
+                  csv_writer.writerow(row)
+
+      print(f"Conversion from TSV to CSV completed. The output file is {output_file_path}.")
+    </code></pre>
+
+    <p>You can then open the spreadsheet in your preferred statistical software.</p>
+  </div>
+</main>
+
+{% include 'footer.html' %}

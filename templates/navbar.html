@@ -1,0 +1,45 @@
+<nav class="navbar bg-nav navbar-expand-lg d-md-static sticky-top pt-2 pb-0">
+    <div class="container-fluid">
+
+        <!-- BRAND -->
+        <a class="navbar-brand perc-margin text-folder" href="{{ url_for('main') }}">Andreas Sellstone</a>
+
+        <!-- TOGGLER -->
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- NAV CONTENT -->
+        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+            
+            <!-- NAV LINKS (LEFT) -->
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item mx-2">
+                    <a class="nav-link  {% if request.path == '/' %}active active-mobile{% endif %}" {% if request.path == '/' %}aria-current="page"{% endif %} href="{{ url_for('main') }}">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link {% if request.path.startswith('/projects') %}active active-mobile{% endif %}" {% if request.path == '/projects' %}aria-current="page"{% endif %} href="{{ url_for('projects_page') }}">Projects</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link {% if request.path == '/about' %}active active-mobile{% endif %}" {% if request.path == '/about' %}aria-current="page"{% endif %} href="{{ url_for('about_page') }}">About</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link {% if request.path == '/contact' %}active active-mobile{% endif %}" {% if request.path == '/contact' %}aria-current="page"{% endif %} href="{{ url_for('contact_page') }}">Contact</a>
+                </li>
+            </ul>
+
+            <!-- ICONS (RIGHT) -->
+            <div class="d-flex align-items-center gap-3 me-1">
+                <a href="https://www.linkedin.com/in/andreas-sellstone-9465462b3" class="icon-hover-circle" target="_blank" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:andreas.sellstone@gmail.com" class="icon-hover-circle" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,65 @@
+/* Card mechanics */
+.card-text {
+  margin-top: 1rem;
+}
+
+.thumb-card {
+  min-height: 23rem;
+}
+
+.hover-text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card:hover .hover-text-overlay {
+  opacity: 1;
+}
+
+.custom-hover-shadow:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3) !important;
+  transition: box-shadow 0.3s ease;
+}
+
+.thumbnail-img {
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* Return to Top Button Styles */
+.return-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0; /* Start invisible */
+  visibility: hidden;
+  background-color: $color-nav;
+  color: $color-folder;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 20px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+.return-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}

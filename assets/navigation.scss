@@ -1,0 +1,156 @@
+/* Navbar styling */
+.navbar .nav-link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-link {
+  color: $color-folder
+}
+
+/* Hamburger menu */
+/* RESET Bootstrap styles */
+.navbar-toggler {
+  border: none !important;
+  padding: 0.5rem;
+  z-index: 1001;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* CUSTOM hamburger icon */
+.navbar-toggler-icon {
+  background-image: none;/* Remove Bootstrap's SVG */
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: #F3F7EC;
+  display: inline-block;
+  border-radius: 1px;
+  transition: background-color 0.2s ease;
+}
+
+/* Top and bottom lines */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: #F3F7EC;
+  border-radius: 1px;
+  transition: transform 0.3s ease, top 0.3s ease, opacity 0.2s ease;
+}
+
+.navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler-icon::after {
+  top: 8px;
+}
+
+/* TOGGLER OPEN STATE — animate to X */
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  background-color: transparent !important; /* hide middle bar */
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+  height: 2.25px; /* visually matches middle line */
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
+  height: 2.25px; /* visually matches middle line */
+}
+
+/* Mobile only active class for nav links */
+@media (max-width: 991.98px) {
+  .nav-link.active {
+    position: relative;
+    color: $color-folder !important;
+  }
+
+  .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0.2rem;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 3px;
+    background-color: currentColor;
+    border-radius: 2px;
+  }
+}
+
+.navbar-brand.text-folder {
+  color: $color-folder;
+}
+
+/* Hover styling for icons */
+.icon-hover-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: $color-folder;
+}
+
+.icon-hover-circle:hover {
+  background-color: #5f615a;
+}
+
+/* On desktop */
+@media (min-width: 992px) {
+
+  /* Active nav link */
+  .navbar .nav-link.active,
+  .navbar .nav-link.active:hover {
+    font-weight: normal;
+    color: $color-nav;
+    background-color: $color-folder;
+    padding-bottom: 0.5rem;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+
+  .navbar .nav-link:hover {
+    font-weight: normal;
+    background-color: #5f615a;
+    padding-bottom: 0.5rem;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+
+
+  /* Static on dekstop */
+  .d-md-static {
+    position: static !important;
+  }
+}
+
+
+/* Breadcrumbs */
+nav ol.breadcrumb {
+  margin-top: 2rem;
+  padding-top: 1rem;
+}

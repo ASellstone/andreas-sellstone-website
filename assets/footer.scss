@@ -1,0 +1,16 @@
+.icon-hover-circle-f {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 35px;
+height: 35px;
+border-radius: 50%;
+transition: background-color 0.3s ease;
+text-decoration: none;
+color: $color-folder;
+}
+
+.icon-hover-circle-f:hover {
+background-color: $dark;
+color: $color-folder !important;
+}

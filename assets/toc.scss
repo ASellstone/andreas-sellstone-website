@@ -1,0 +1,29 @@
+/* TOC button */
+.toc-button {
+  font-size: $font-size-base;
+  color: $color-projects;
+}
+
+.toc-button:hover {
+  color: $color-projects;
+}
+
+.card,
+.card-header {
+  border: none !important;
+}
+
+/* Chevron rotation for TOC */
+.rotate {
+  transition: transform 0.3s ease;
+}
+.rotate.down {
+  transform: rotate(0deg);
+}
+.rotate.up {
+  transform: rotate(-180deg);
+}
+
+.toc-card {
+  background-color: $color-folder;
+}

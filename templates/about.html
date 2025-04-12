@@ -1,0 +1,18 @@
+{% include 'header.html' %}
+
+<main class="container mb-5 main-padding">
+    <h1 class="text-me" style="padding-top: 1rem; margin-top: 5rem;">About me</h1>
+
+    <img src="{{ url_for('static', filename='images/profile_picture.JPG') }}"
+    alt="Andreas Sellstone"
+    class="img-fluid rounded-circle float-md-start me-md-4"
+    style="max-width: 180px; margin-top: 2rem;">
+
+    <p>I am a cognitive scientist from Sweden with an interest in the intersection of technology and human cognition. I started my academic journey in philosophy, where studies in the philosophy of mind and language made me interested in the connection between language and thought. This made me study linguistics for a year, eventually sparking my interest in cognitive science. After receiving my Bachelor degree, I started my graduate studies in cognitive science.</p>
+
+    <p>Cognitive science as a field is multidisciplinary, involving computer science, linguistics, psychology, philosophy, neuroscience, and even anthropology (an often forgotten discipline in cognitive science). All of these disciplines interest me deeply, but shortly after starting my studies in cognitive science I found a specific interest in the intersection between technology, cognition, and language, particularly the cognitive processes involved in writing and reading using technology.</p>
+
+    <p>Not all of my interests revolve around what I have studied however. I am an avid reader, interested in science fiction and classic literature. I also love movies and art. Before deciding to study philosophy, linguistics or cognitive science, I wanted to be an animator (or a graphic designer). In my childhood I made many stop motion animation films using Lego. Some of these are <a href="https://www.youtube.com/@CableAnimStudios">accessible online</a> (keep in mind that I was between 12 and 13 years old when I made them). I later studied animation and graphic design in high school and wanted to study animation after graduation. But since I had developed an interest in philosophy during my free time, I decided to take a course in theoretical philosophy to see if I would like it as much in an academic setting—which I of course ended up doing.</p>
+</main>
+
+{% include 'footer.html' %}
